@@ -167,7 +167,7 @@
 	"c_cpp.configuration.suggestSnippets.description": "Se è true, i frammenti vengono forniti dal server di linguaggio.",
 	"c_cpp.configuration.enhancedColorization.description": "Se questa opzione è abilitata, il codice viene colorato in base a IntelliSense. Questa impostazione si applica solo se intelliSenseEngine è impostato su \"Default\".",
 	"c_cpp.configuration.codeFolding.description": "Se è abilitata, gli intervalli di riduzione del codice vengono fornite dal server di linguaggio.",
-	"c_cpp.configuration.vcpkg.enabled.markdownDescription": "Abilita i servizi di integrazione per l'[utilità di gestione dipendenze di vcpkg](https://aka.ms/vcpkg/).",
+	"c_cpp.configuration.vcpkg.enabled.markdownDescription": "Abilita i servizi di integrazione per l'[utilità di gestione dipendenze di vcpkg] (https://aka.ms/vcpkg/).",
 	"c_cpp.configuration.addNodeAddonIncludePaths.description": "Aggiunge percorsi di inclusione da nan e node-addon-api quando sono dipendenze.",
 	"c_cpp.configuration.renameRequiresIdentifier.description": "Se è true, con 'Rinomina simbolo' sarà richiesto un identificatore C/C++ valido.",
 	"c_cpp.configuration.autocompleteAddParentheses.description": "Se è true, il completamento automatico aggiungerà automaticamente \"(\" dopo le chiamate di funzione. In tal caso potrebbe essere aggiunto anche \")\", a seconda del valore dell'impostazione \"editor.autoClosingBrackets\".",
@@ -254,5 +254,18 @@
 	"c_cpp.taskDefinitions.detail.description": "Dettagli aggiuntivi dell'attività",
 	"c_cpp.debuggers.sourceFileMap.sourceFileMapEntry.description": "Percorsi correnti e della fase di compilazione degli stessi alberi di origine. I file trovati in EditorPath vengono associati al percorso CompileTimePath per la corrispondenza dei punti di interruzione e associati da CompileTimePath a EditorPath durante la visualizzazione dei percorsi delle analisi dello stack.",
 	"c_cpp.debuggers.sourceFileMap.sourceFileMapEntry.editorPath.description": "Percorso dell'albero di origine che verrà usato dall'editor.",
-	"c_cpp.debuggers.sourceFileMap.sourceFileMapEntry.useForBreakpoints.description": "False se questa voce viene usata solo per il mapping dei percorsi dello stack frame. True se questa voce deve essere usata anche quando si specificano i percorsi dei punti di interruzione."
+	"c_cpp.debuggers.sourceFileMap.sourceFileMapEntry.useForBreakpoints.description": "False se questa voce viene usata solo per il mapping dei percorsi dello stack frame. True se questa voce deve essere usata anche quando si specificano i percorsi dei punti di interruzione.",
+	"c_cpp.debuggers.symbolOptions.description": "Options to control how symbols (.pdb files) are found and loaded.",
+	"c_cpp.debuggers.VSSymbolOptions.description": "Provides configuration for locating and loading symbols to the debug adapter.",
+	"c_cpp.debuggers.VSSymbolOptions.searchPaths.description": "Array of symbol server URLs (example: http​://MyExampleSymbolServer) or directories (example: /build/symbols) to search for .pdb files. These directories will be searched in addition to the default locations -- next to the module and the path where the pdb was originally dropped to.",
+	"c_cpp.debuggers.VSSymbolOptions.searchMicrosoftSymbolServer.description": "If 'true' the Microsoft Symbol server (https​://msdl.microsoft.com​/download/symbols) is added to the symbols search path. If unspecified, this option defaults to 'false'.",
+	"c_cpp.debuggers.VSSymbolOptions.cachePath.description": "Directory where symbols downloaded from symbol servers should be cached. If unspecified, on Windows the debugger will default to %TEMP%\\SymbolCache.",
+	"c_cpp.debuggers.VSSymbolOptions.moduleFilter.description": "Provides options to control which modules (.dll files) the debugger will attempt to load symbols (.pdb files) for.",
+	"c_cpp.debuggers.VSSymbolOptionsModuleFilter.description": "Provides configuration for loading symbols to the debug adapter.",
+	"c_cpp.debuggers.VSSymbolOptionsModuleFilter.mode.description": "Controls which of the two basic operating modes the module filter operates in.",
+	"c_cpp.debuggers.VSSymbolOptionsModuleFilter.mode.loadAllButExcluded.enumDescriptions": "Load symbols for all modules unless the module is in the 'excludedModules' array.",
+	"c_cpp.debuggers.VSSymbolOptionsModuleFilter.mode.loadOnlyIncluded.enumDescriptions": "Do not attempt to load symbols for ANY module unless it is in the 'includedModules' array, or it is included through the 'includeSymbolsNextToModules' setting.",
+	"c_cpp.debuggers.VSSymbolOptionsModuleFilter.excludedModules.description": "Array of modules that the debugger should NOT load symbols for. Wildcards (example: MyCompany.*.dll) are supported.\r\n\r\nThis property is ignored unless 'mode' is set to 'loadAllButExcluded'.",
+	"c_cpp.debuggers.VSSymbolOptionsModuleFilter.includedModules.description": "Array of modules that the debugger should load symbols for. Wildcards (example: MyCompany.*.dll) are supported.\r\n\r\nThis property is ignored unless 'mode' is set to 'loadOnlyIncluded'.",
+	"c_cpp.debuggers.VSSymbolOptionsModuleFilter.includeSymbolsNextToModules.description": "If true, for any module NOT in the 'includedModules' array, the debugger will still check next to the module itself and the launching executable, but it will not check paths on the symbol search list. This option defaults to 'true'.\r\n\r\nThis property is ignored unless 'mode' is set to 'loadOnlyIncluded'."
 }
